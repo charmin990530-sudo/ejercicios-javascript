@@ -17,3 +17,13 @@ for (let i = 1; i <= 20; i = i + 1) {
 for ( let i = 2; i <= 20; i = i + 2) {
     console.log(i);
 }
+
+const numeros1 = [15, 80, 23, 120, 67];
+let numeroMayor = 0;
+
+for (let i = 0; i < numeros1.length; i = i + 1) {
+    if (numeros1[i] > numeroMayor) {
+        numeroMayor = numeros1[i];
+    }
+    console.log("El numero mayor es:", numeroMayor);
+}
