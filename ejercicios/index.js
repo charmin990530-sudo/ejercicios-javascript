@@ -58,3 +58,22 @@ for (let i = 0; i < estudiantes.length; i = i + 1) {
     }
     
 }
+
+const ejercicios = [
+    { nombre: "Sentadilla", peso: 80 },
+    { nombre: "Press banca", peso: 60 },
+    { nombre: "Peso muerto", peso: 120 },
+    { nombre: "Dominadas lastradas", peso: 25 }
+];
+
+let maximoPeso = 0;
+let ejercicioMasPesado = "";
+
+for (let i = 0; i < ejercicios.length; i = i + 1) {
+    if (ejercicios[i].peso > maximoPeso) {
+        maximoPeso = ejercicios[i].peso;
+        ejercicioMasPesado = ejercicios[i].nombre;
+    }
+}
+
+console.log(`El ejercicio más pesado es ${ejercicioMasPesado} con ${maximoPeso} kg`);
