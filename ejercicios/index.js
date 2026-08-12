@@ -28,3 +28,17 @@ for (let i = 0; i < numeros1.length; i = i + 1) {
     
 }
 console.log("El numero mayor es:", numeroMayor);
+
+const productos = [
+    { nombre: "mouse", precio: 50000},
+    { nombre: "teclado", precio: 120000},
+    { nombre: "monitor", precio: 800000}
+];
+
+let precioTotal = 0;
+
+for (let i = 0; i < productos.length; i = i + 1) {
+    precioTotal = precioTotal + productos[i].precio;
+}
+
+console.log("El precio total es:", precioTotal);
