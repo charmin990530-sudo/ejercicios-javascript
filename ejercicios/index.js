@@ -42,3 +42,19 @@ for (let i = 0; i < productos.length; i = i + 1) {
 }
 
 console.log("El precio total es:", precioTotal);
+
+const estudiantes = [
+    { nombre: "Ana", nota: 4.5 },
+    { nombre: "Pedro", nota: 2.8 },
+    { nombre: "Laura", nota: 4.0 },
+    { nombre: "Carlos", nota: 2.5 }
+];
+
+for (let i = 0; i < estudiantes.length; i = i + 1) {
+    if (estudiantes[i].nota >= 3.0) { 
+        console.log(estudiantes[i].nombre, "-", estudiantes[i].nota)
+
+    
+    }
+    
+}
