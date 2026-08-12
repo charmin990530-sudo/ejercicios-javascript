@@ -25,5 +25,6 @@ for (let i = 0; i < numeros1.length; i = i + 1) {
     if (numeros1[i] > numeroMayor) {
         numeroMayor = numeros1[i];
     }
-    console.log("El numero mayor es:", numeroMayor);
+    
 }
+console.log("El numero mayor es:", numeroMayor);
