@@ -201,3 +201,4 @@ console.log("Inversión total:", inversionTotal)
 console.log("Producto más caro:", productoMasCaro.nombre, "-", productoMasCaro.precio)
 console.log("Producto más económico:", productoMasEconomico.nombre, "-", productoMasEconomico.precio)
 console.log("Producto con mayor inversión:", productoMasInvertido.nombre, "-", mayorInversion);
+
