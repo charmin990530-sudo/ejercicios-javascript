@@ -6,7 +6,7 @@ console.log("Último color:", colores[colores.length - 1]);
 
 const numeros = ["1", "2", "4", "5"]
 
-console.log (`el array tiene, ${numeros.length} elementos`);
+console.log(`el array tiene, ${numeros.length} elementos`);
 
 for (let i = 1; i <= 20; i = i + 1) {
     if (i % 2 === 0) {
@@ -14,7 +14,7 @@ for (let i = 1; i <= 20; i = i + 1) {
     }
 }
 
-for ( let i = 2; i <= 20; i = i + 2) {
+for (let i = 2; i <= 20; i = i + 2) {
     console.log(i);
 }
 
@@ -25,14 +25,14 @@ for (let i = 0; i < numeros1.length; i = i + 1) {
     if (numeros1[i] > numeroMayor) {
         numeroMayor = numeros1[i];
     }
-    
+
 }
 console.log("El numero mayor es:", numeroMayor);
 
 const productos = [
-    { nombre: "mouse", precio: 50000},
-    { nombre: "teclado", precio: 120000},
-    { nombre: "monitor", precio: 800000}
+    { nombre: "mouse", precio: 50000 },
+    { nombre: "teclado", precio: 120000 },
+    { nombre: "monitor", precio: 800000 }
 ];
 
 let precioTotal = 0;
@@ -51,12 +51,12 @@ const estudiantes = [
 ];
 
 for (let i = 0; i < estudiantes.length; i = i + 1) {
-    if (estudiantes[i].nota >= 3.0) { 
+    if (estudiantes[i].nota >= 3.0) {
         console.log(estudiantes[i].nombre, "-", estudiantes[i].nota)
 
-    
+
     }
-    
+
 }
 
 const ejercicios = [
@@ -118,3 +118,86 @@ for (let i = 0; i < boxeadores.length; i = i + 1) {
 console.log("--- RESUMEN ---");
 console.log(`Boxeador con más victorias: ${boxeadorMasVictorias} (${maxVictorias} victorias)`);
 console.log(`Boxeador con más KOs: ${boxeadorMasKos} (${maxKos} KOs)`);
+
+const productos1 = [
+    {
+        nombre: "tablet",
+        marca: "amazon",
+        precio: 500000,
+        stock: 14,
+        modelo: 2021
+    },
+
+    {
+        nombre: "iphone",
+        marca: "apple",
+        precio: 1000000,
+        stock: 200,
+        modelo: 2025
+    },
+
+    {
+        nombre: "portatil",
+        marca: "acer",
+        precio: 50000000,
+        stock: 150,
+        modelo: 2021
+    },
+
+    {
+        nombre: "ipad",
+        marca: "apple",
+        precio: 3000000,
+        stock: 1000,
+        modelo: 2021
+    },
+
+    {
+        nombre: "luces",
+        marca: "espectro-completo",
+        precio: 500000,
+        stock: 150,
+        modelo: 2024
+    },
+
+    {
+        nombre: "carpa",
+        marca: "indoor",
+        precio: 4500000,
+        stock: 100,
+        modelo: 2026
+    }
+]
+
+let inversionTotal = 0
+let productoMasCaro = productos1[0]
+let productoMasEconomico = productos1[0]
+let productoMasInvertido = productos1[0]
+let mayorInversion = 0
+
+for (let i = 0; i < productos1.length; i++) {
+    let inversion = productos1[i].precio * productos1[i].stock
+    inversionTotal = inversionTotal + inversion
+
+    
+// producto más caro
+if (productos1[i].precio > productoMasCaro.precio) {
+    productoMasCaro = productos1[i]
+}
+
+// producto más económico
+if (productos1[i].precio < productoMasEconomico.precio) {
+    productoMasEconomico = productos1[i]
+}
+
+// producto con mayor inversión (precio * stock)
+if (inversion > mayorInversion) {
+    mayorInversion = inversion
+    productoMasInvertido = productos1[i]
+}
+}
+
+console.log("Inversión total:", inversionTotal)
+console.log("Producto más caro:", productoMasCaro.nombre, "-", productoMasCaro.precio)
+console.log("Producto más económico:", productoMasEconomico.nombre, "-", productoMasEconomico.precio)
+console.log("Producto con mayor inversión:", productoMasInvertido.nombre, "-", mayorInversion);
